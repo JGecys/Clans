@@ -1,0 +1,75 @@
+name: Clans
+version: 0.2
+author: Souleris
+website: http://www.aimpot.com/
+main: com.gmail.jgecys.Main
+description: Alpha Build of plugin.
+
+commands:
+  create:
+    description: Creates new Clan.
+    usage: /create <ClanName> <ClanTag>
+    permission: clans.create
+  invite:
+    description: Invites other player into your Clan.
+    usage: /invite <Player>
+    permission: clans.invite
+  join:
+    description: Joins specified Clan
+    usage: /join <Clan>
+    permission: clans.join
+  leave:
+    description: Leaves from current Clan
+    usage: /leave
+    permission: clans.leave
+  clanlist:
+    description: Display of current Clans
+    usage: /clanlist
+    permission: clans.clanlist
+  claninfo:
+    description: Display of your or specified Clan information
+    usage: /claninfo (optional:<Clan>)
+    permission: clans.claninfo
+  scoreboard:
+    description: Display of Top 5 Players.
+	usage: /scoreboard
+    permission: clans.scoreboard
+  kick:
+    description: Kicks player from your Clan.
+    usage: /kick <Player> (Requires owner)
+    permission: clans.kick
+  setowner:
+    description: Gives Owner rank to player.
+    usage: /setowner <Player> (Requires owner)
+    permission: clans.setowner
+  settag:
+    description: Replaces Tag with given. Max 6 Letters
+    usage: /settag <Tag> (Requires owner)
+    permission: clans.settag
+
+
+permissions:
+  clans.default:
+    description: Gives permission to all commands
+	default: true
+	children:
+	  clans.create: true
+	  clans.invite: true
+	  clans.join: true
+	  clans.leave: true
+	  clans.clanlist: true
+	  clans.claninfo: true
+	  clans.scoreboard: true
+	  clans.kick: true
+	  clans.setowner: true
+	  clans.settag: true
+  clans.create:
+  clans.invite:
+  clans.join:
+  clans.leave:
+  clans.clanlist:
+  clans.claninfo:
+  clans.scoreboard:
+  clans.kick:
+  clans.setowner:
+  clans.settag:
